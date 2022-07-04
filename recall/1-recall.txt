@@ -1,0 +1,24 @@
+you can scale the dataset by using sklearn 
+
+from sklearn.preprocessing import StandardScaler()
+scaler = StandardScaler()
+scaled_X = scaler.fit_transform(digits_pixels)
+
+the originanl dataset has each column as a pixel value, where each cell 
+is the value for an 8x8 matrix, and the final column is the number that 
+was identified. 
+
+So to do the PCA, we have to remove the final column.
+
+matplotlib.imshow() on a 2D array makes the color image. 
+plt.show()
+
+to get a single row into a 2D array first you extact a single row:
+df.iloc[0]
+
+then you convert to np array:
+single_row.to_numpy()
+
+then you convert to 2d array:
+np.reshape(np_array, (8,8))
+
